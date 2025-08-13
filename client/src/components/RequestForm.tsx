@@ -32,7 +32,7 @@ function RequestForm() {
   };
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-[#f0f9ff] via-[#e0f2fe] to-white dark:bg-gradient-to-br dark:from-[#0c4a6e] dark:via-[#2563eb] dark:to-[#1e3a8a] transition-colors duration-300">
+    <section className="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-[#f0f9ff] via-[#e0f2fe] to-white dark:bg-gradient-to-bl dark:from-[#b1d2b1] dark:via-[#00b400] dark:to-[#00b400] transition-colors duration-300">
       <div className="max-w-xl mx-auto space-y-8">
         <motion.h2
           className="text-3xl sm:text-4xl font-bold text-center text-gray-800 dark:text-gray-100"
@@ -82,7 +82,7 @@ function RequestForm() {
             disabled={loading}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="w-full bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white font-semibold py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 focus:ring-4 focus:ring-blue-300 dark:focus:ring-green-300"
+            className="w-full bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 dark:from-[#c5c523] dark:to-[#c5c523] text-white font-semibold py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
           >
             {loading ? "Yuborilmoqda..." : "Yuborish"}
           </motion.button>

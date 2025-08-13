@@ -24,7 +24,7 @@ function SchoolPhotos() {
   if (error) return <p className="text-center text-red-500 py-10">{error}</p>;
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-[#f0f9ff] via-[#e0f2fe] to-white dark:bg-gradient-to-br dark:from-[#001F3F] dark:via-[#2563eb] dark:to-[#1e3a8a] transition-colors duration-300">
+    <section className="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-[#f0f9ff] via-[#e0f2fe] to-white dark:bg-gradient-to-br dark:from-[#a0c9a0] dark:via-[#00b400] dark:to-[#00b400] transition-colors duration-300">
       <div className="max-w-6xl mx-auto space-y-12">
         <motion.h2
           className="text-3xl sm:text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500 dark:from-green-400 dark:to-blue-400"

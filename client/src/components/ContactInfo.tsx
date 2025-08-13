@@ -3,6 +3,7 @@ import { getContactForm } from "@/api/contactInfo";
 import type { ContactForm } from "@/types/all";
 import { motion } from "framer-motion";
 import { FaTelegramPlane, FaInstagram, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { YoutubeIcon } from "lucide-react";
 
 function ContactInfo() {
   const [contact, setContact] = useState<ContactForm | null>(null);
@@ -45,7 +46,7 @@ function ContactInfo() {
   const locations = [contact.map1, contact.map2, contact.map3, contact.map4];
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-[#f0f9ff] via-[#e0f2fe] to-white dark:bg-gradient-to-br dark:from-[#001F3F] dark:via-[#2563eb] dark:to-[#1e3a8a] transition-colors duration-300">
+    <section className="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-[#f0f9ff] via-[#e0f2fe] to-white dark:bg-gradient-to-br dark:from-[#b1d2b1] dark:via-[#00b400] dark:to-[#00b400] transition-colors duration-300">
       <div className="max-w-6xl mx-auto space-y-10 lg:space-y-12">
         <motion.h2
           className="text-3xl sm:text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500 dark:from-green-400 dark:to-blue-400"
@@ -58,7 +59,7 @@ function ContactInfo() {
 
         {/* Contact Cards */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-10"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.7 }}
@@ -101,8 +102,22 @@ function ContactInfo() {
                 >
                   Instagram sahifamiz
                 </a>
-              ),
+              ),  
             },
+            {
+              icon: <YoutubeIcon className="text-white text-xl" />,
+              title: "YouTube",
+              desc: (
+                <a
+                  href={contact.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 dark:text-green-400 hover:underline cursor-pointer"
+                >
+                  YouTube kanalimiz
+                </a>
+              ),
+            }
           ].map((item, idx) => (
             <motion.div
               key={idx}

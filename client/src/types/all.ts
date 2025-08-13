@@ -27,6 +27,7 @@ export interface ContactForm {
   phone: string;
   telegram: string;
   instagram: string;
+  youtube: string;
   map1: string;
   map2: string;
   map3: string;

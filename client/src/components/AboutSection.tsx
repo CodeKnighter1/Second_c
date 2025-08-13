@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import type { AboutData } from "@/types/all";
 import { getAboutData } from "@/api/about";
+import { Textarea } from "@/components/ui/textarea"
 
 function About() {
   const [about, setAbout] = useState<AboutData | null>(null);
@@ -26,7 +27,7 @@ function About() {
   if (!about) return null;
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-[#f0f9ff] via-[#e0f2fe] to-white dark:bg-gradient-to-br dark:from-[#0c4a6e] dark:via-[#2563eb] dark:to-[#1e3a8a] transition-colors duration-300">
+    <section className="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-[#f0f9ff] via-[#e0f2fe] to-white dark:bg-[#00b400] dark:via-[#00b400] dark:to-[#00b400]">
       <div className="max-w-7xl mx-auto space-y-24">
         {/* Title and Description */}
         <motion.div
@@ -37,10 +38,12 @@ function About() {
           className="grid md:grid-cols-2 gap-10 items-center"
         >
           <h1 className="text-4xl md:text-6xl font-extrabold text-orange-700 dark:text-orange-400 leading-snug">
-            {about.title}
+            SODIQ SCHOOL <br />
+            <span className="text-orange-600 dark:text-orange-400">MISSIYASI</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-            {about.description}
+            Bizning vazifamiz — har bir o‘quvchiga eng yuqori sifatli ta’lim berish va
+            ularning orzularini ro‘yobga chiqarish yo‘lida qo‘llab-quvvatlash.
           </p>
         </motion.div>
 
@@ -79,20 +82,21 @@ function About() {
         >
           {/* Text + Button */}
           <div className="space-y-6">
-            <Button className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white shadow-md rounded-xl px-6 py-3 text-base sm:text-lg">
+            <Button className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 dark:from-[#c5c523] dark:to-[#c5c523] text-white shadow-md rounded-xl px-6 py-3 text-base sm:text-lg">
               Biz haqimizda
             </Button>
 
             <h2 className="text-5xl font-extrabold text-gray-800 dark:text-white leading-tight">
-              SODIQ SCHOOL <br />
-              <span className="text-orange-600 dark:text-orange-400">MISSIYASI</span>
+              {about.title}
             </h2>
 
             <div className="bg-white dark:bg-gray-800 border-l-4 border-orange-600 dark:border-orange-400 p-6 rounded-xl shadow-md">
-              <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-                Bizning vazifamiz — har bir o‘quvchiga eng yuqori sifatli ta’lim berish va
-                ularning orzularini ro‘yobga chiqarish yo‘lida qo‘llab-quvvatlash.
-              </p>
+              <Textarea
+                className="mt-4 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg p-4 text-gray-800 dark:text-gray-200"
+                placeholder="Fikrlaringizni qoldiring..."
+                rows={3}
+                value={about.description}
+              />
             </div>
           </div>
 

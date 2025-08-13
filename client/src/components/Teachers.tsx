@@ -24,7 +24,7 @@ function Teachers() {
   if (error) return <p className="text-center text-lg text-red-600 dark:text-red-400 py-10">Xatolik: {error}</p>;
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-[#f0f9ff] via-[#e0f2fe] to-white dark:bg-gradient-to-br dark:from-[#001F3F] dark:via-[#2563eb] dark:to-[#1e3a8a] transition-colors duration-300">
+    <section className="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-[#f0f9ff] via-[#e0f2fe] to-white dark:bg-gradient-to-br dark:from-[#b1d2b1] dark:via-[#00b400] dark:to-[#00b400] transition-colors duration-300">
       <div className="max-w-7xl mx-auto space-y-12 lg:space-y-16">
         <motion.h2
           className="text-3xl sm:text-4xl font-bold text-center text-blue-500 dark:text-green-400"
